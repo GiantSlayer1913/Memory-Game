@@ -1,1 +1,1 @@
-# Memory-Game
+# wdi-fundamentals-memorygame
