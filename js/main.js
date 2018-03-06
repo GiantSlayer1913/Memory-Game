@@ -1,6 +1,27 @@
 
 
-var cards = ['queen', 'queen', 'king', 'king'];
+var cards = [
+	 cardOne = {
+	 	rank: "queen",
+	 	suit: "hearts",
+	 	cardImage: "images/queen-of-hearts.png"
+	 },
+	 cardTwo = {
+	 	rank: "queen",
+	 	suit: "diamonds",
+	 	cardImage: "images/queen-of-diamonds.png"
+	 },
+	 cardThree = {
+	 	rank: "king",
+	 	suit: "hearts",
+	 	cardImage: "images/king-of-hearts.png"
+	 },
+	 cardFour = {
+	 	rank: "king",
+	 	suit: "diamonds",
+	 	cardImage: "images/king-of-diamonds.png"
+	 }	
+];
 var cardsInPlay = [];
 
 var checkForMatch = function() {
@@ -11,9 +32,11 @@ var checkForMatch = function() {
 };
 };
 checkForMatch();
+
 var flipCard = function(cardId) {
-	cardsInPlay.push(cards[cardId]);
-		console.log("User flipped " + cards[cardId]);
+	// Something keeps going wrong in the line below...
+	cardsInPlay.push(cards[cardId].rank)
+		console.log("User flipped " + cards[cardId].rank);
 if (cardsInPlay.length === 2) {
     if (cardsInPlay[0] === cardsInPlay[1]) {
     	alert("You found a match!");
@@ -23,9 +46,10 @@ if (cardsInPlay.length === 2) {
 
 };
 };
-
 flipCard();
 flipCard(0);
+	console.log("User flipped" + this.cards[cardId].rank + this.cards[cardId].cardImage)
 flipCard(2);
+	console.log("User flipped" + this.cards[cardId].rank + this.cards[cardId].cardImage)
 
 
