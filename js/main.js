@@ -25,6 +25,7 @@ var cards = [
 var cardsInPlay = [];
 
 var checkForMatch = function() {
+	cards.setAttribute(src, cardImage);
 	if (cardsInPlay[0] === cardsInPlay[1]) {
 		console.log("You found a match!");
 	} else {
@@ -33,9 +34,10 @@ var checkForMatch = function() {
 };
 checkForMatch();
 
-var flipCard = function(cardId) {
+var flipCard = function() {
+	this.getAttribute('data-id', 'cardId')
 	// Something keeps going wrong in the line below...
-	cardsInPlay.push(cards[cardId].rank)
+	cardsInPlay.push(cards[cardId].rank);
 		console.log("User flipped " + cards[cardId].rank);
 if (cardsInPlay.length === 2) {
     if (cardsInPlay[0] === cardsInPlay[1]) {
@@ -46,10 +48,24 @@ if (cardsInPlay.length === 2) {
 
 };
 };
-flipCard();
-flipCard(0);
-	console.log("User flipped" + this.cards[cardId].rank + this.cards[cardId].cardImage)
-flipCard(2);
-	console.log("User flipped" + this.cards[cardId].rank + this.cards[cardId].cardImage)
+var createBoard = function() {
 
+	for (var i = 0; i < cards.length; i++) {
+		var cardElement = document.createElement('img');
+		this.setAttribute('src', 'images/back.png');
+		this.setAttribute('data-id', this[i]);
+		addEventListener('click', this);
+		appendChild(this, 'game-board');
+	};
+		
+};
+
+
+
+flipCard();
+
+	console.log("User flipped" + this.cards[cardId].rank + this.cards[cardId].cardImage);
+	console.log("User flipped" + this.cards[cardId].rank + this.cards[cardId].cardImage);
+
+createBoard();
 
