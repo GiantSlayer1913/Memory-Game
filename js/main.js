@@ -23,17 +23,17 @@ var cards = [
 	 }	
 ];
 var cardsInPlay = [];
-
+// This function is incomplete...
 var checkForMatch = function() {
-	cards.setAttribute(src, cardImage);
-	if (cardsInPlay[0] === cardsInPlay[1]) {
+	cards.setAttribute('src', cards[cardImage]);
+	if (cardsInPlay[0].rank === cardsInPlay[1].rank) {
 		console.log("You found a match!");
 	} else {
 		console.log("Sorry, try again.");
 };
 };
 checkForMatch();
-
+// This function is incomplete...
 var flipCard = function() {
 	this.getAttribute('data-id', 'cardId')
 	// Something keeps going wrong in the line below...
